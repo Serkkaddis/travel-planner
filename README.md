@@ -72,5 +72,5 @@ Dark Mode: Provide an option for dark mode to improve usability.
 ##  Deployment
 The application will be deployed on Netlify/Vercel. You can access it here: Travel Planner Live.
 
-##Contact
+## Contact
 For questions or feedback, reach out to @Serkkaddis.
