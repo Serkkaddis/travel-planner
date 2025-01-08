@@ -70,7 +70,7 @@ Route Optimization: Suggest the most efficient travel routes.
 Dark Mode: Provide an option for dark mode to improve usability.
 
 ##  Deployment
-The application will be deployed on Netlify/Vercel. You can access it here: Travel Planner Live.
+The application will be deployed on Netlify/Vercel. 
 
 ## Contact
 For questions or feedback, reach out to @Serkkaddis.
