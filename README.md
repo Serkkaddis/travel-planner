@@ -1,7 +1,7 @@
 🌍 **Travel Planner
 Travel Planner is a web application designed to help users plan their trips efficiently by exploring destinations, booking flights, and organizing itineraries. Built with React and styled using TailwindCSS, the app integrates with the Amadeus API to provide real-time travel data. This project is a capstone project for ALX's Front End Development Course.
 
-🚀 **Features
+🚀 *Features
 Search for Destinations: Find destinations by city or country using the Amadeus API.
 Flight Offers: View available flight options with prices and airlines.
 Hotel Accommodations: Explore hotels and their amenities in the desired city.
@@ -15,20 +15,11 @@ State Management: React hooks (useState, useEffect), optionally Zustand or Redux
 Tools: Vite, Axios
 📦 **Installation
 Clone the repository:
-
-bash
-Copy code
 git clone https://github.com/<serkkaddis>/travel-planner.git
 cd travel-planner
 Install dependencies:
-
-bash
-Copy code
 npm install
 Start the development server:
-
-bash
-Copy code
 npm run dev
 Open the app in your browser at http://localhost:5173.
 
@@ -36,12 +27,9 @@ Open the app in your browser at http://localhost:5173.
 Sign up for an Amadeus API key: Amadeus Developer Portal.
 Create a .env file in the project root and add your API credentials:
 env
-Copy code
 VITE_AMADEUS_API_KEY=your_api_key
 VITE_AMADEUS_API_SECRET=your_api_secret
 🖼️ Project Structure
-bash
-Copy code
 travel-planner/
 │
 ├── src/
@@ -56,6 +44,7 @@ travel-planner/
 ├── .env                      # Environment variables
 ├── package.json              # Dependencies and scripts
 ├── README.md                 # Project documentation
+
 🌟**Planned Enhancements
 User Authentication: Allow users to save and revisit their itineraries.
 Budget Planning: Set a travel budget and track estimated expenses.
