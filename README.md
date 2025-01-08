@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+🌍 Travel Planner
+Travel Planner is a web application designed to help users plan their trips efficiently by exploring destinations, booking flights, and organizing itineraries. Built with React and styled using TailwindCSS, the app integrates with the Amadeus API to provide real-time travel data. This project is a capstone project for ALX's Front End Development Course.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Features
+Search for Destinations: Find destinations by city or country using the Amadeus API.
+Flight Offers: View available flight options with prices and airlines.
+Hotel Accommodations: Explore hotels and their amenities in the desired city.
+Itinerary Planning: Save and organize travel plans in a visually appealing format.
+Responsive Design: A fully responsive UI for seamless experience across devices.
+🛠️ Technology Stack
+Frontend: React, TailwindCSS
+API Integration: Amadeus API
+Deployment: Netlify/Vercel
+State Management: React hooks (useState, useEffect), optionally Zustand or Redux
+Tools: Vite, Axios
+📦 Installation
+Clone the repository:
 
-## Available Scripts
+bash
+Copy code
+git clone https://github.com/<serkkaddis>/travel-planner.git
+cd travel-planner
+Install dependencies:
 
-In the project directory, you can run:
+bash
+Copy code
+npm install
+Start the development server:
 
-### `npm start`
+bash
+Copy code
+npm run dev
+Open the app in your browser at http://localhost:5173.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔑 API Configuration
+Sign up for an Amadeus API key: Amadeus Developer Portal.
+Create a .env file in the project root and add your API credentials:
+env
+Copy code
+VITE_AMADEUS_API_KEY=your_api_key
+VITE_AMADEUS_API_SECRET=your_api_secret
+🖼️ Project Structure
+bash
+Copy code
+travel-planner/
+│
+├── src/
+│   ├── components/           # Reusable UI components (e.g., SearchBar, DestinationCard)
+│   ├── pages/                # Page components (e.g., Home, Itinerary)
+│   ├── styles/               # Global styles and Tailwind configuration
+│   ├── App.jsx               # Root component
+│   ├── main.jsx              # React entry point
+│
+├── public/                   # Static assets
+│
+├── .env                      # Environment variables
+├── package.json              # Dependencies and scripts
+├── README.md                 # Project documentation
+🌟 Planned Enhancements
+User Authentication: Allow users to save and revisit their itineraries.
+Budget Planning: Set a travel budget and track estimated expenses.
+Route Optimization: Suggest the most efficient travel routes.
+Dark Mode: Provide an option for dark mode to improve usability.
+🎉 Deployment
+The application is deployed on Netlify/Vercel. You can access it here: Travel Planner Live.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🤝 Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📧 Contact
+For questions or feedback, reach out to Serkkaddis.
