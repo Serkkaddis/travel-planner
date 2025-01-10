@@ -1,71 +1,100 @@
-🌍 Travel Planner
-Travel Planner is a web application designed to help users plan their trips efficiently by exploring destinations, booking flights, and organizing itineraries. Built with React and styled using TailwindCSS, the app integrates with the Amadeus API to provide real-time travel data. This project is a capstone project for ALX's Front End Development Course.
+# Welcome to React Router!
 
-🚀 Features
-Search for Destinations: Find destinations by city or country using the Amadeus API.
-Flight Offers: View available flight options with prices and airlines.
-Hotel Accommodations: Explore hotels and their amenities in the desired city.
-Itinerary Planning: Save and organize travel plans in a visually appealing format.
-Responsive Design: A fully responsive UI for seamless experience across devices.
-🛠️ Technology Stack
-Frontend: React, TailwindCSS
-API Integration: Amadeus API
-Deployment: Netlify/Vercel
-State Management: React hooks (useState, useEffect), optionally Zustand or Redux
-Tools: Vite, Axios
-📦 Installation
-Clone the repository:
+A modern, production-ready template for building full-stack React applications using React Router.
 
-bash
-Copy code
-git clone https://github.com/<serkkaddis>/travel-planner.git
-cd travel-planner
-Install dependencies:
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-bash
-Copy code
+## Features
+
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
+
+## Getting Started
+
+### Installation
+
+Install the dependencies:
+
+```bash
 npm install
-Start the development server:
+```
 
-bash
-Copy code
+### Development
+
+Start the development server with HMR:
+
+```bash
 npm run dev
-Open the app in your browser at http://localhost:5173.
+```
 
-🔑 API Configuration
-Sign up for an Amadeus API key: Amadeus Developer Portal.
-Create a .env file in the project root and add your API credentials:
-env
-Copy code
-VITE_AMADEUS_API_KEY=your_api_key
-VITE_AMADEUS_API_SECRET=your_api_secret
-🖼️ Project Structure
-bash
-Copy code
-travel-planner/
-│
-├── src/
-│   ├── components/           # Reusable UI components (e.g., SearchBar, DestinationCard)
-│   ├── pages/                # Page components (e.g., Home, Itinerary)
-│   ├── styles/               # Global styles and Tailwind configuration
-│   ├── App.jsx               # Root component
-│   ├── main.jsx              # React entry point
-│
-├── public/                   # Static assets
-│
-├── .env                      # Environment variables
-├── package.json              # Dependencies and scripts
-├── README.md                 # Project documentation
-🌟 Planned Enhancements
-User Authentication: Allow users to save and revisit their itineraries.
-Budget Planning: Set a travel budget and track estimated expenses.
-Route Optimization: Suggest the most efficient travel routes.
-Dark Mode: Provide an option for dark mode to improve usability.
-🎉 Deployment
-The application is deployed on Netlify/Vercel. You can access it here: Travel Planner Live.
+Your application will be available at `http://localhost:5173`.
 
-🤝 Contributing
-Contributions are welcome! Feel free to open issues or submit pull requests.
+## Building for Production
 
-📧 Contact
-For questions or feedback, reach out to Serkkaddis.
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+### Docker Deployment
+
+This template includes three Dockerfiles optimized for different package managers:
+
+- `Dockerfile` - for npm
+- `Dockerfile.pnpm` - for pnpm
+- `Dockerfile.bun` - for bun
+
+To build and run using Docker:
+
+```bash
+# For npm
+docker build -t my-app .
+
+# For pnpm
+docker build -f Dockerfile.pnpm -t my-app .
+
+# For bun
+docker build -f Dockerfile.bun -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
