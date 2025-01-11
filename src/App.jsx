@@ -4,6 +4,11 @@ import SearchBar from "./components/SearchBar";
 import DestinationCard from "./components/DestinationCard";
 import DestinationDetails from "./components/DestinationDetails";
 import { searchDestinations } from "./api/apiServices";
+import { ItineraryProvider } from "./context/ItineraryContext";
+import ItineraryPlanner from "./components/ItineraryPlanner";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
   const [destinations, setDestinations] = useState([]);
@@ -27,30 +32,40 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div>
-        <SearchBar onSearch={handleSearch} />
-        <div>
-          {error && <div>{error}</div>}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {destinations.map((destination) => (
-              <DestinationCard
-                key={destination.id}
-                destination={destination}
-                origin={origin}
-                departureDate={departureDate}
-              />
-            ))}
-          </div>
-        </div>
+    <ThemeProvider>
+    <ItineraryProvider>
+
+      <Router>
+        <Header />
         <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <SearchBar onSearch={handleSearch} />
+                {error && <div>{error}</div>}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {destinations.map((destination) => (
+                    <DestinationCard
+                      key={destination.id}
+                      destination={destination}
+                      origin={origin}
+                      departureDate={departureDate}
+                    />
+                  ))}
+                </div>
+              </div>
+            }
+          />
           <Route
             path="/destination/:id"
             element={<DestinationDetails origin={origin} departureDate={departureDate} />}
           />
+          <Route path="/itinerary" element={<ItineraryPlanner />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </ItineraryProvider>
+    </ThemeProvider>
   );
 };
 
