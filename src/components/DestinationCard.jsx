@@ -2,8 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const DestinationCard = ({ destination = {}, origin, departureDate }) => {
+const DestinationCard = ({ destination, origin, departureDate }) => {
   const navigate = useNavigate();
+
   const { id = "N/A", name = "Unknown Destination", address = {} } = destination;
 
   return (

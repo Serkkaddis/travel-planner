@@ -35,6 +35,7 @@ export const getAccessToken = async () => {
 };
 
 export const searchDestinations = async (keyword) => {
+  console.log("API called with keyword:", keyword)
   const url = `${AMADEUS_API_BASE_URL_V1}/reference-data/locations?keyword=${keyword}&subType=CITY`;
   try {
     const accessToken = await getAccessToken();
@@ -43,6 +44,7 @@ export const searchDestinations = async (keyword) => {
         Authorization: `Bearer ${accessToken}`,
       },
     });
+    console.log("API response:", response.data);
     return response.data.data.filter(item => 
       item.subType === "CITY" || item.subType === "AIRPORT"
     ) || [];
@@ -147,5 +149,23 @@ export const fetchAttractions = async (latitude, longitude) => {
     });
     return response.data.data || [];
   });
+};
+
+export const fetchHotels = async (latitude, longitude) => {
+  try {
+    const response = await fetch(
+      `https://test.api.amadeus.com/v2/shopping/hotel-offers?latitude=${latitude}&longitude=${longitude}`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`, 
+        },
+      }
+    );
+    const data = await response.json();
+    return data.data || [];
+  } catch (error) {
+    console.error("Error fetching hotels:", error.message);
+    return [];
+  }
 };
 

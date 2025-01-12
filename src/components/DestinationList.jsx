@@ -45,7 +45,7 @@ const DestinationList = () => {
             <h2 className="text-lg font-bold">{destination.name}</h2>
             <p>{destination.address?.countryName}</p>
             <img
-              src={`https://via.placeholder.com/150`} // Replace with Teleport API or custom images
+              src={`https://api.teleport.org/api/cities/`} 
               alt={destination.name}
               className="rounded w-full"
             />
